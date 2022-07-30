@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="/src//course/obj/Debug/net5.0/scopedcss/bundle/" />
+  <ContentRoot BasePath="/Identity" Path="/root/.nuget/fallbackpackages/microsoft.aspnetcore.identity.ui/5.0.17/staticwebassets/V4/" />
+  <ContentRoot BasePath="_content/Radzen.Blazor" Path="/root/.nuget/fallbackpackages/radzen.blazor/3.19.10/staticwebassets/" />
+</StaticWebAssets>

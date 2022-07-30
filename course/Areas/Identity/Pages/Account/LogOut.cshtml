@@ -1,0 +1,21 @@
+﻿@page
+@model LogoutModel
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> _singinManager
+
+
+
+@functions{
+    public async Task<IActionResult> OnGet()
+    {
+        if (_singinManager.IsSignedIn(User))
+        {
+            await _singinManager.SignOutAsync();
+        }
+
+        return Redirect("~/");
+    }
+}
+
+

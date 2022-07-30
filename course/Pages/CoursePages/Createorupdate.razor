@@ -1,0 +1,159 @@
+﻿@page "/course/Createorupdate"
+@page "/course/edit/{Id:int}"
+
+
+
+
+@using CourseModels
+@using CourseBusnies.Contracts
+
+
+@inject ICourseRepository _courseRepository
+@inject NavigationManager _navigationManager
+@inject IJSRuntime _jsruntime
+
+
+
+
+
+    <h4>Course Added</h4>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <EditForm Model="courseModel" OnValidSubmit="CoureCreateOrUpdate">
+                    <DataAnnotationsValidator></DataAnnotationsValidator>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <InputText @bind-Value="courseModel.Name" class="form-control"></InputText>
+                        <ValidationMessage For="()=>courseModel.Name"></ValidationMessage>
+                    </div>
+                    <div class="form-group">
+                        <label>CoursePrice</label>
+                        <InputNumber @bind-Value="courseModel.CoursePrice" class="form-control"></InputNumber>
+                        <ValidationMessage For="()=>courseModel.CoursePrice"></ValidationMessage>
+                    </div>
+
+
+                    <label>Description</label>
+                    <InputText @bind-Value="courseModel.Description" class="form-control"></InputText>
+                    <ValidationMessage For="()=>courseModel.Description"></ValidationMessage>
+
+                    <div class="form-group">
+                        <label>Title</label>
+                        <InputText @bind-Value="courseModel.Title" class="form-control"></InputText>
+                        <ValidationMessage For="()=>courseModel.Title"></ValidationMessage>
+                    </div>
+                    <div class="form-group">
+                        <label>Sub Title</label>
+                        <InputText @bind-Value="courseModel.SubTitle" class="form-control"></InputText>
+                        <ValidationMessage For="()=>courseModel.SubTitle"></ValidationMessage>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button class="btn btn-success">Course Add</button>
+                        <NavLink href="courselist" class="btn btn-danger">Back To Course List</NavLink>
+
+                    </div>
+
+                </EditForm>
+            </div>
+        </div>
+
+    </div>
+
+    @code {
+
+        [CascadingParameter]
+        public Task<AuthenticationState> state { get; set; }
+
+        [Parameter]
+        public int? Id { get; set; }
+
+
+        private string Title { get; set; }
+        private CourseDto courseModel { get; set; } = new CourseDto();
+
+
+
+        protected override async Task OnInitializedAsync()
+        {
+            var authSatate = await state;
+
+            if (!authSatate.User.Identity.IsAuthenticated)
+            {
+                var url = new Uri(_navigationManager.Uri);
+                _navigationManager.NavigateTo($"/identity/account/login?returnUrl={url.LocalPath}");
+            }
+
+            if (Id != null)
+            {
+                Title = "Update";
+                var data = await _courseRepository.GetCourse((int)Id);
+                courseModel = data.Data;
+            }
+        }
+
+        private async Task CoureCreateOrUpdate()
+
+        {
+
+            try
+            {
+                if (Id != null)
+                {
+                    var updateData = await _courseRepository.UpdateCourse((int)Id, courseModel);
+                    if (updateData.IsSucces)
+
+                        await _jsruntime.ToastrSuccess(updateData.Message);
+
+                    else
+                        await _jsruntime.ToastrError(updateData.Message);
+
+                }
+                else
+                {
+                    var created = await _courseRepository.CreateCourse(courseModel);
+                    if (created.IsSucces)
+
+                        await _jsruntime.ToastrSuccess(created.Message);
+                    else
+                        await _jsruntime.ToastrError(created.Message);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                await _jsruntime.ToastrError(ex.Message.ToString());
+            }
+
+        }
+
+
+
+
+
+        //private async Task AddPicture(InputFileChangeEventArgs file)
+        //{
+        //    var fileName = file.File;
+
+        //    if (fileName != null)
+        //    {
+        //        var data = await _fileUpload.UploadFile(fileName);
+        //        var updateCourse = await _courseRepository.UpdateCourseImage((int)Id, data);
+
+        //        if (updateCourse.IsSucces)
+
+        //            await _jsruntime.ToastrSuccess(updateCourse.Message);
+
+        //        else
+        //            await _jsruntime.ToastrError(updateCourse.Message);
+
+        //    }
+        //}
+
+
+
+    }
+

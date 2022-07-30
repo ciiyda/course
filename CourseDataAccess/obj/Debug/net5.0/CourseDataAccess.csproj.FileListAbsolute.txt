@@ -1,0 +1,15 @@
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\bin\Debug\net5.0\CourseDataAccess.deps.json
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\bin\Debug\net5.0\CourseDataAccess.runtimeconfig.json
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\bin\Debug\net5.0\CourseDataAccess.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\bin\Debug\net5.0\CourseDataAccess.dll
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\bin\Debug\net5.0\ref\CourseDataAccess.dll
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\bin\Debug\net5.0\CourseDataAccess.pdb
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\CourseDataAccess.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\CourseDataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\CourseDataAccess.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\CourseDataAccess.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\CourseDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\CourseDataAccess.dll
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\ref\CourseDataAccess.dll
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\CourseDataAccess.pdb
+C:\Users\Lenovo\source\repos\Course\CourseDataAccess\obj\Debug\net5.0\CourseDataAccess.genruntimeconfig.cache

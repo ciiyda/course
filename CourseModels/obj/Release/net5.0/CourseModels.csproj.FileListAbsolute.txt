@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\Course\CourseModels\bin\Release\net5.0\CourseModels.deps.json
+C:\Users\Lenovo\source\repos\Course\CourseModels\bin\Release\net5.0\CourseModels.dll
+C:\Users\Lenovo\source\repos\Course\CourseModels\bin\Release\net5.0\ref\CourseModels.dll
+C:\Users\Lenovo\source\repos\Course\CourseModels\bin\Release\net5.0\CourseModels.pdb
+C:\Users\Lenovo\source\repos\Course\CourseModels\obj\Release\net5.0\CourseModels.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\Course\CourseModels\obj\Release\net5.0\CourseModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\repos\Course\CourseModels\obj\Release\net5.0\CourseModels.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\Course\CourseModels\obj\Release\net5.0\CourseModels.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\Course\CourseModels\obj\Release\net5.0\CourseModels.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Course\CourseModels\obj\Release\net5.0\CourseModels.dll
+C:\Users\Lenovo\source\repos\Course\CourseModels\obj\Release\net5.0\ref\CourseModels.dll
+C:\Users\Lenovo\source\repos\Course\CourseModels\obj\Release\net5.0\CourseModels.pdb
